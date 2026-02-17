@@ -1,0 +1,20 @@
+/* Extracted profile and contact styles */
+.profile-img {
+  float: right;
+  border-radius: 50%;
+  width: 70px;
+  padding: 6px;
+}
+.contact-info {
+  float: right;
+  padding: 6px;
+}
+
+/* Basic page container tweaks to match berlin-tay look */
+.markdown-body {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color: #111;
+}
