@@ -1,20 +1,129 @@
-/* Extracted profile and contact styles */
-.profile-img {
-  float: right;
-  border-radius: 50%;
-  width: 70px;
-  padding: 6px;
-}
-.contact-info {
-  float: right;
-  padding: 6px;
+:root {
+  --bg: #f3f6ff;
+  --text: #1a1f36;
+  --card: #ffffff;
+  --border: #dde3ff;
+  --accent: #5a67ff;
+  --accent-soft: #edf0ff;
 }
 
-/* Basic page container tweaks to match berlin-tay look */
-.markdown-body {
-  max-width: 740px;
-  margin: 0 auto;
-  padding: 1rem;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 0% 0%, #e7e9ff 0, transparent 35%),
+    radial-gradient(circle at 100% 0%, #dff2ff 0, transparent 30%),
+    var(--bg);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-  color: #111;
+  color: var(--text);
+}
+
+.markdown-body {
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1rem 1rem;
+}
+
+.hero-card,
+.content-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(41, 51, 95, 0.08);
+}
+
+.hero-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0.6rem 0 0.4rem;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.hero-intro {
+  margin: 0 0 0.85rem;
+  color: #4a547a;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 100px;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 20px rgba(35, 50, 99, 0.2);
+}
+
+.contact-info {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+  color: #4f5a88;
+  font-weight: 500;
+}
+
+.contact-info a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.content-card {
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: #293363;
+  margin-top: 0.25rem;
+  border-bottom: 2px solid var(--accent-soft);
+  padding-bottom: 0.5rem;
+}
+
+h4 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.45rem;
+  color: #2f3a6d;
+}
+
+ul {
+  margin-top: 0.45rem;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .hero-card {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .contact-info {
+    justify-content: center;
+  }
 }
